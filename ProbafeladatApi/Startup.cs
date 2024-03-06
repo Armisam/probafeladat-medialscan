@@ -6,9 +6,9 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using System.IO;
 
-using ProbafeladatApi.Services; 
+using ProbafeladatApi.Services;
 
-namespace ProbafeladatApi 
+namespace ProbafeladatApi
 {
     public class Startup
     {
@@ -25,6 +25,18 @@ namespace ProbafeladatApi
             {
                 options.SerializerSettings.Formatting = Formatting.Indented;
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
+
             services.AddSingleton<ItemService>();
         }
 
@@ -36,6 +48,8 @@ namespace ProbafeladatApi
             }
 
             app.UseRouting();
+
+            app.UseCors("AllowAllOrigins");
 
             app.UseAuthorization();
 

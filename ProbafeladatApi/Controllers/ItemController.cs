@@ -66,23 +66,24 @@ namespace ProbafeladatApi.Controllers
             items[index] = existingItem; 
             _itemService.SaveItems(items); 
 
-            return Ok(existingItem);
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var existingItem = _itemService.GetItems().FirstOrDefault(x => x.Id == id);
+            var items = _itemService.GetItems().ToList(); 
+
+            var existingItem = items.FirstOrDefault(x => x.Id == id);
             if (existingItem == null)
             {
                 return NotFound();
             }
 
-            var items = _itemService.GetItems().ToList();
-            items.Remove(existingItem);
+            items.RemoveAll(x => x.Id == id); 
             _itemService.SaveItems(items);
 
-            return Ok(existingItem);
+            return Ok();
         }
     }
 }
