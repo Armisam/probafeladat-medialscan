@@ -53,7 +53,6 @@ export class TableComponent implements OnInit {
               type: [item.type !== null ? item.type : ''],
               price: [item.price !== null ? item.price : 0]
             });
-  
             this.editStates[item.id] = false;
           }
         });

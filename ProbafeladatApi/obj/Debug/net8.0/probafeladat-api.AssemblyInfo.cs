@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("probafeladat-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1771f6ebfd70e71701d06e2f6c1a03ce9dfcd57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf1a0aa95b119058c2c844b60e36e850b10ae760")]
 [assembly: System.Reflection.AssemblyProductAttribute("probafeladat-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("probafeladat-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

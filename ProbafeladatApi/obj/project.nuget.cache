@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WQfBRTiY7BHigD/hrzRelVGcepy7AMfBHR4J2K5DVJKddaG0f2RYIbKR0gm+hjDnA5A4S7lWeaPLvXMZN/6iCA==",
+  "dgSpecHash": "8IuCsPU3gH7QG9j9dkys70iTS7dlRwT8t1XYYTUwic7HiFi9fsFz2jNMElE8/e5ao50/XvOUjisRTno6BR1XUw==",
   "success": true,
   "projectFilePath": "D:\\probafeladat-medialscan\\ProbafeladatApi\\probafeladat-api.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,8 @@
     "C:\\Users\\nemer\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\nemer\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\nemer\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\nemer\\.nuget\\packages\\nunit\\4.1.0\\nunit.4.1.0.nupkg.sha512",
+    "C:\\Users\\nemer\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512",
     "C:\\Users\\nemer\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\nemer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\nemer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

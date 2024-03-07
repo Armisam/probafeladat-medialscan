@@ -37,3 +37,11 @@ D:\probafeladat-medialscan\ProbafeladatApi\obj\Debug\net8.0\refint\probafeladat-
 D:\probafeladat-medialscan\ProbafeladatApi\obj\Debug\net8.0\probafeladat-api.pdb
 D:\probafeladat-medialscan\ProbafeladatApi\obj\Debug\net8.0\probafeladat-api.genruntimeconfig.cache
 D:\probafeladat-medialscan\ProbafeladatApi\obj\Debug\net8.0\ref\probafeladat-api.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\NUnit3.TestAdapter.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\NUnit3.TestAdapter.pdb
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\nunit.engine.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\nunit.engine.api.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\nunit.engine.core.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\testcentric.engine.metadata.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\nunit.framework.dll
+D:\probafeladat-medialscan\ProbafeladatApi\bin\Debug\net8.0\nunit.framework.legacy.dll
