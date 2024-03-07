@@ -1,0 +1,90 @@
+<div class="table-container">
+    <div class="new-row" [formGroup]="newItemFormGroup">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+            <mat-error *ngIf="newItemFormGroup.get('name')?.hasError('required')">This field is required!</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input matInput formControlName="type">
+            <mat-error *ngIf="newItemFormGroup.get('type')?.hasError('required')">This field is required!</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input type="number" matInput formControlName="price">
+            <mat-error *ngIf="newItemFormGroup.get('price')?.hasError('required')">Only numeric characters!</mat-error>
+        </mat-form-field>
+        <button mat-raised-button (click)="addNewItem()"> Add new Item </button>
+    </div>
+    <table mat-table [dataSource]="items" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let item"> {{ item.id }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let item">
+                <ng-container *ngIf="!isEditing(item.id)">
+                    {{ item.name }}
+                </ng-container>
+                <ng-container *ngIf="isEditing(item.id)">
+                    <mat-form-field>
+                        <input matInput [formControl]="getTableControl(item.id, 'name')">
+                        <mat-error *ngIf="getTableControl(item.id, 'name')?.hasError('required')">This field is
+                            required!</mat-error>
+                    </mat-form-field>
+                </ng-container>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let item">
+                <ng-container *ngIf="!isEditing(item.id)">
+                    {{ item.type }}
+                </ng-container>
+                <ng-container *ngIf="isEditing(item.id)">
+                    <mat-form-field>
+                        <input matInput [formControl]="getTableControl(item.id, 'type')">
+                        <mat-error *ngIf="getTableControl(item.id, 'type')?.hasError('required')">This field is
+                            required!</mat-error>
+                    </mat-form-field>
+                </ng-container>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let item">
+                <ng-container *ngIf="!isEditing(item.id)">
+                    {{ item.price }}
+                </ng-container>
+                <ng-container *ngIf="isEditing(item.id)">
+                    <mat-form-field>
+                        <input type="number" matInput [formControl]="getTableControl(item.id, 'price')">
+                        <mat-error *ngIf="getTableControl(item.id, 'price')?.hasError('required')">Only numeric
+                            characters!</mat-error>
+                    </mat-form-field>
+                </ng-container>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let item">
+                <div class="action-row">
+                    <button mat-raised-button color="primary" (click)="toggleEdit(item.id)">Edit</button>
+                    <button mat-raised-button color="warn" (click)="deleteItem(item.id)">Delete</button>
+                    <button mat-raised-button color="accent" [disabled]="!isEditing(item.id)"
+                        (click)="saveItem(item.id)">Save</button>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
